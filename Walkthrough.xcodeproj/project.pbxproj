@@ -13,6 +13,8 @@
 		AF937D1C2C10FF6F00E91205 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF937D1B2C10FF6F00E91205 /* Preview Assets.xcassets */; };
 		AF937D272C186FFA00E91205 /* HeadlineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF937D262C186FF900E91205 /* HeadlineTextView.swift */; };
 		AF937D2A2C1871A900E91205 /* ButtonWBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF937D292C1871A800E91205 /* ButtonWBView.swift */; };
+		AF937D2C2C188CB000E91205 /* ModalPrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF937D2B2C188CB000E91205 /* ModalPrivacyPolicyView.swift */; };
+		AF937D2E2C188CEB00E91205 /* ModalTermsOfUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF937D2D2C188CEB00E91205 /* ModalTermsOfUseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		AF937D1B2C10FF6F00E91205 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF937D262C186FF900E91205 /* HeadlineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTextView.swift; sourceTree = "<group>"; };
 		AF937D292C1871A800E91205 /* ButtonWBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWBView.swift; sourceTree = "<group>"; };
+		AF937D2B2C188CB000E91205 /* ModalPrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPrivacyPolicyView.swift; sourceTree = "<group>"; };
+		AF937D2D2C188CEB00E91205 /* ModalTermsOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTermsOfUseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				AF937D282C18714B00E91205 /* ViewComponents */,
 				AF937D142C10FF6C00E91205 /* WalkthroughApp.swift */,
 				AF937D162C10FF6C00E91205 /* ContentView.swift */,
+				AF937D2B2C188CB000E91205 /* ModalPrivacyPolicyView.swift */,
+				AF937D2D2C188CEB00E91205 /* ModalTermsOfUseView.swift */,
 				AF937D182C10FF6F00E91205 /* Assets.xcassets */,
 				AF937D1A2C10FF6F00E91205 /* Preview Content */,
 			);
@@ -153,7 +159,9 @@
 			files = (
 				AF937D172C10FF6C00E91205 /* ContentView.swift in Sources */,
 				AF937D2A2C1871A900E91205 /* ButtonWBView.swift in Sources */,
+				AF937D2E2C188CEB00E91205 /* ModalTermsOfUseView.swift in Sources */,
 				AF937D272C186FFA00E91205 /* HeadlineTextView.swift in Sources */,
+				AF937D2C2C188CB000E91205 /* ModalPrivacyPolicyView.swift in Sources */,
 				AF937D152C10FF6C00E91205 /* WalkthroughApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

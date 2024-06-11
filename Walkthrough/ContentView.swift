@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showPrivacyPolicy = false
+    @State private var showTermsOfUse = false
+    
     var body: some View {
         VStack {
             Image("walktroughImage")
@@ -20,16 +23,25 @@ struct ContentView: View {
             
             Spacer()
             
-            Text(.init("""
-            Нажимая кнопку продолжить я соглашаюсь с
-            \("[Политикой Конфиденциальности](https://google.com)") и \("[Условиями Использования](https://google.com)")
-           """))
+            Text("Нажимая кнопку продолжить я соглашаюсь с")
                 .font(.system(size: 10))
                 .foregroundStyle(.gray)
-                .tint(.wbDefault)
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 13)
-                .lineSpacing(4)
+            
+            HStack(spacing: 0) {
+                TextButton(isPresented: $showPrivacyPolicy, title: "Политикой Конфиденциальности")
+                    .sheet(isPresented: $showPrivacyPolicy) {
+                        PrivacyPolicyView()
+                    }
+                
+                Text(" и ")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 10))
+                
+                TextButton(isPresented: $showTermsOfUse, title: "Условиями Использования")
+                    .sheet(isPresented: $showTermsOfUse) {
+                        TermsOfUseView()
+                    }
+            }
             
             ButtonWBView(title: "Начать общаться", action: {})
         }
@@ -42,3 +54,34 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+struct TextButton: View {
+    @Binding var isPresented: Bool
+    let title: String
+    
+    var body: some View {
+        Button(action: {
+            isPresented.toggle()
+        }) {
+            Text(title)
+                .font(.system(size: 10))
+                .foregroundStyle(.wbDefault)
+        }
+    }
+}
+
+
+
+
+
+//            Text(.init("""
+//            Нажимая кнопку продолжить я соглашаюсь с
+//            \("[Политикой Конфиденциальности](https://google.com)") и \("[Условиями Использования](https://google.com)")
+//           """))
+//                .font(.system(size: 10))
+//                .foregroundStyle(.gray)
+//                .tint(.wbDefault)
+//                .multilineTextAlignment(.center)
+//                .padding(.bottom, 13)
+//                .lineSpacing(4)
